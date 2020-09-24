@@ -1,0 +1,30 @@
+﻿<Window x:Class="DrugApp.Affichage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DrugApp"
+        mc:Ignorable="d"
+        Title="Affichage" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            
+        </Grid.RowDefinitions>
+        <ListView x:Name="list">
+            <ListView.View>
+                <GridView  AllowsColumnReorder="True" ColumnHeaderToolTip="Authors">
+                    <GridViewColumn Header="Numero"  DisplayMemberBinding="{Binding Path=Numero}" />
+                    <GridViewColumn Header="Nom"  DisplayMemberBinding="{Binding Path=Nom}" />
+                    <GridViewColumn Header="Molecule"  DisplayMemberBinding="{Binding Path=Molecule}" />
+                    <GridViewColumn Header="Posologie"  DisplayMemberBinding="{Binding Path=Posologie}" />
+                    <GridViewColumn Header="Contre-Indication"  DisplayMemberBinding="{Binding Path=Contre_Indication}"/>
+                </GridView>
+
+
+
+
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
